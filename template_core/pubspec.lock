@@ -14,7 +14,7 @@ packages:
     description:
       path: "packages/pond/modules/actions_core"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -39,7 +39,7 @@ packages:
     description:
       path: "packages/pond/modules/app_icon"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -72,7 +72,7 @@ packages:
     description:
       path: "packages/pond/modules/auth_core"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -241,7 +241,7 @@ packages:
     description:
       path: "packages/pond/modules/drop_core"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -250,7 +250,7 @@ packages:
     description:
       path: "packages/pond/modules/environment_core"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -403,7 +403,7 @@ packages:
     description:
       path: "packages/jlogical_utils/jlogical_utils_cli"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -412,7 +412,7 @@ packages:
     description:
       path: "packages/jlogical_utils/jlogical_utils_core"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -461,7 +461,7 @@ packages:
     description:
       path: "packages/pond/modules/log_core"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -510,7 +510,7 @@ packages:
     description:
       path: "packages/model/model_core"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -527,7 +527,7 @@ packages:
     description:
       path: "packages/pond/modules/ops"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -552,7 +552,7 @@ packages:
     description:
       path: "packages/path_core"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -561,7 +561,7 @@ packages:
     description:
       path: "packages/persistence/persistence_core"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -586,7 +586,7 @@ packages:
     description:
       path: "packages/pond/pond_cli"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -595,7 +595,7 @@ packages:
     description:
       path: "packages/pond/pond_core"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -612,7 +612,7 @@ packages:
     description:
       path: "packages/port/port_core"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -621,7 +621,7 @@ packages:
     description:
       path: "packages/pond/modules/port_drop_core"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -694,7 +694,7 @@ packages:
     description:
       path: "packages/pond/modules/release"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -839,7 +839,7 @@ packages:
     description:
       path: "packages/pond/modules/task_core"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -888,7 +888,7 @@ packages:
     description:
       path: "packages/type"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -897,7 +897,7 @@ packages:
     description:
       path: "packages/pond/modules/type_core"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -922,7 +922,7 @@ packages:
     description:
       path: "packages/utils/utils_core"
       ref: "v3.0"
-      resolved-ref: "324ff15d2d7c96e663264cc8865acc20bb92e40d"
+      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"

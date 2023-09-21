@@ -29,21 +29,12 @@ Future<void> main(List<String> args) async {
         child: StyledText.h1('Not Found!'),
       ),
     ),
-    initialPageGetter: () => HomePage(),
-    onError: (appPondContext, error, stackTrace) {
-      if (appPondContext == null) {
-        print(error);
-        print(stackTrace);
-      } else {
-        appPondContext.find<LogCoreComponent>().logError(error, stackTrace);
-      }
-    },
+    initialRouteGetter: () => HomeRoute(),
   );
 }
 
 Future<AppPondContext> getAppPondContext(CorePondContext corePondContext) async {
   final appPondContext = AppPondContext(corePondContext: corePondContext);
-  await appPondContext.register(NavigationAppComponent());
   await appPondContext.register(DebugAppComponent());
   await appPondContext.register(LogAppComponent());
   await appPondContext.register(DeviceFilesAppComponent());

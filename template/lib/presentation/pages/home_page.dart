@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:jlogical_utils/jlogical_utils.dart';
 
-class HomePage extends AppPage {
+class HomeRoute with IsRoute<HomeRoute> {
   @override
   PathDefinition get pathDefinition => PathDefinition.home;
 
   @override
-  Widget build(BuildContext context) {
+  HomeRoute copy() {
+    return HomeRoute();
+  }
+}
+
+class HomePage with IsAppPage<HomeRoute> {
+  @override
+  Widget onBuild(BuildContext context, HomeRoute route) {
     return StyledPage(
       titleText: 'Hello',
       body: StyledList.column.withScrollbar(
@@ -15,10 +22,5 @@ class HomePage extends AppPage {
         ],
       ),
     );
-  }
-
-  @override
-  AppPage copy() {
-    return HomePage();
   }
 }
