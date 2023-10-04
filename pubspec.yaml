@@ -1,0 +1,15 @@
+name: template
+description: Template project
+
+publish_to: "none"
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+version: 0.0.1
+
+dependencies:
+  lints: ^2.0.0
+
+dev_dependencies:
+  melos: ^3.1.1

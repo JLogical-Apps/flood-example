@@ -3,3 +3,7 @@
 
 Runner.ipa
 Runner.app.*
+
+# Melos
+pubspec_overrides.yaml
+*.iml

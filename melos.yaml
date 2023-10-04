@@ -1,0 +1,19 @@
+name: template
+repository: https://github.com/your_username/your_repository
+
+packages:
+  - template
+  - template_core
+
+command:
+  bootstrap:
+    usePubspecOverrides: true
+
+scripts:
+  test:
+    name: test
+    description: 'Run all tests'
+    run: |
+      melos exec --fail-fast                                  -- flutter analyze . && \
+      melos exec --fail-fast --dir-exists="test" --no-flutter -- flutter test . && \
+      melos exec --fail-fast --dir-exists="test" --flutter    -- flutter test .

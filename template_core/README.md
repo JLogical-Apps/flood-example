@@ -1,1 +1,0 @@
-Read the README.md in the `template` directory.
