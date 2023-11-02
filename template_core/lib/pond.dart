@@ -4,38 +4,42 @@ import 'package:jlogical_utils_core/jlogical_utils_core.dart';
 
 Future<CorePondContext> getCorePondContext({
   EnvironmentConfig? environmentConfig,
-  List<CorePondComponent> Function(CorePondContext context)? additionalCoreComponents,
-  List<RepositoryImplementation> repositoryImplementations = const [],
-  List<AuthServiceImplementation> authServiceImplementations = const [],
-  FutureOr Function(CorePondContext context, String userId)? onAfterLogin,
-  FutureOr Function(CorePondContext context, String userId)? onBeforeLogout,
+  FutureOr<List<CorePondComponent>> Function(CorePondContext context)? additionalCoreComponents,
+  List<RepositoryImplementation> Function(CorePondContext context)? repositoryImplementations,
+  List<AuthServiceImplementation> Function(CorePondContext context)? authServiceImplementations,
+  MessagingService? Function(CorePondContext context)? messagingService,
+  LoggerService? Function(CorePondContext context)? loggerService,
+  TaskRunner? Function(CorePondContext context)? taskRunner,
 }) async {
-  environmentConfig ??= EnvironmentConfig.static.memory();
-
+  environmentConfig ??= EnvironmentConfig.static.environmentVariables();
   final corePondContext = CorePondContext();
 
   await corePondContext.register(TypeCoreComponent());
   await corePondContext.register(EnvironmentConfigCoreComponent(environmentConfig: environmentConfig));
 
-  for (final coreComponent in additionalCoreComponents?.call(corePondContext) ?? []) {
+  for (final coreComponent in await additionalCoreComponents?.call(corePondContext) ?? []) {
     await corePondContext.register(coreComponent);
   }
 
+  await corePondContext.register(LogCoreComponent(
+    loggerService: loggerService?.call(corePondContext) ?? LoggerService.static.console,
+  ));
+
   await corePondContext.register(AuthCoreComponent(
-    authService: AuthService.static.adapting().withListener(
-          onAfterLogin: onAfterLogin == null ? null : (userId) => onAfterLogin(corePondContext, userId),
-          onBeforeLogout: onBeforeLogout == null ? null : (userId) => onBeforeLogout(corePondContext, userId),
-        ),
-    authServiceImplementations: authServiceImplementations,
+    authService: AuthService.static.adapting(),
+    authServiceImplementations: authServiceImplementations?.call(corePondContext) ?? [],
   ));
   await corePondContext.register(DropCoreComponent(
-    repositoryImplementations: repositoryImplementations,
-    authenticatedUserIdX:
-        corePondContext.locate<AuthCoreComponent>().userIdX.mapWithValue((maybeUserIdX) => maybeUserIdX.getOrNull()),
+    repositoryImplementations: repositoryImplementations?.call(corePondContext) ?? [],
+    loggedInAccountX:
+        corePondContext.locate<AuthCoreComponent>().accountX.mapWithValue((maybeUserIdX) => maybeUserIdX.getOrNull()),
   ));
-  await corePondContext.register(LogCoreComponent.console());
-  await corePondContext.register(
-      ActionCoreComponent(actionWrapper: <P, R>(Action<P, R> action) => action.log(context: corePondContext)));
+  await corePondContext.register(MessagingCoreComponent(
+    messagingService: messagingService?.call(corePondContext) ?? MessagingService.static.blank,
+  ));
+  await corePondContext.register(ActionCoreComponent(
+    actionWrapper: <P, R>(Action<P, R> action) => action.log(context: corePondContext),
+  ));
   await corePondContext.register(PortDropCoreComponent());
 
   // TODO Register repositories here.
@@ -46,7 +50,6 @@ Future<CorePondContext> getCorePondContext({
 Future<CorePondContext> getTestingCorePondContext() async {
   final corePondContext = await getCorePondContext(
     environmentConfig: EnvironmentConfig.static.testing(),
-    repositoryImplementations: [],
   );
 
   await corePondContext.locate<AuthCoreComponent>().signup('asdf@asdf.com', 'mypassword');

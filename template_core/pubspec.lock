@@ -13,8 +13,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/actions_core"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -38,8 +38,17 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/app_icon"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
+      url: "git@github.com:jaboyc/jlogical_utils.git"
+    source: git
+    version: "0.0.1"
+  appwrite_core:
+    dependency: transitive
+    description:
+      path: "packages/pond/modules/appwrite_core"
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -47,10 +56,10 @@ packages:
     dependency: transitive
     description:
       name: archive
-      sha256: e0902a06f0e00414e4e3438a084580161279f137aeb862274710f29ec10cf01e
+      sha256: "7e0d52067d05f2e0324268097ba723b71cb41ac8a6a2b24d1edf9c536b987b03"
       url: "https://pub.dev"
     source: hosted
-    version: "3.3.9"
+    version: "3.4.6"
   args:
     dependency: transitive
     description:
@@ -71,8 +80,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/auth_core"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -196,29 +205,31 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.0.2"
+  dart_appwrite:
+    dependency: transitive
+    description:
+      name: dart_appwrite
+      sha256: a43972ea7868b3811af513810e2fb20b0208ab70d09e195fb8d9c0b8f7c4524f
+      url: "https://pub.dev"
+    source: hosted
+    version: "10.0.0"
   dart_console:
     dependency: transitive
     description:
-      name: dart_console
-      sha256: dfa4b63eb4382325ff975fdb6b7a0db8303bb5809ee5cb4516b44153844742ed
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.2.0"
-  dart_console2:
-    dependency: transitive
-    description:
-      name: dart_console2
-      sha256: "300833ffdd8c465d454cb5007c7f29d28ac8246af5abd922f8c490e1e87c894f"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.0.0"
+      path: "."
+      ref: main
+      resolved-ref: fd58d4db89e2ff567cff39b59615fcd72828f285
+      url: "https://github.com/Linkadi98/dart_console.git"
+    source: git
+    version: "1.1.2"
   dcli:
     dependency: transitive
     description:
-      name: dcli
-      sha256: f9d71f1ec4977744f1a7b1e92bf9382588070ae3b1794a071f15c0972e7fb50d
-      url: "https://pub.dev"
-    source: hosted
+      path: dcli
+      ref: "922bb02830458f065750909dbf40fa785e59c5d5"
+      resolved-ref: "922bb02830458f065750909dbf40fa785e59c5d5"
+      url: "git@github.com:Linkadi98/dcli.git"
+    source: git
     version: "3.0.2"
   dcli_core:
     dependency: transitive
@@ -228,6 +239,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.6"
+  diffutil_dart:
+    dependency: transitive
+    description:
+      name: diffutil_dart
+      sha256: c50883c5dd64714ce8b1b49fd5e5d688271f0e4a1c0c50cc941accc453175c01
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.0"
   directed_graph:
     dependency: transitive
     description:
@@ -240,8 +259,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/drop_core"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -249,8 +268,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/environment_core"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -294,6 +313,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
+  firebase_ops:
+    dependency: transitive
+    description:
+      path: "packages/pond/modules/firebase_ops"
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
+      url: "git@github.com:jaboyc/jlogical_utils.git"
+    source: git
+    version: "0.0.1"
   frontend_server_client:
     dependency: transitive
     description:
@@ -377,10 +405,11 @@ packages:
   interact:
     dependency: transitive
     description:
-      name: interact
-      sha256: b1abf79334bec42e58496a054cb7ee7ca74da6181f6a1fb6b134f1aa22bc4080
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: e180aa04146a78fadb11ecc93347321b5b2382cc
+      resolved-ref: e180aa04146a78fadb11ecc93347321b5b2382cc
+      url: "git@github.com:Linkadi98/interact.git"
+    source: git
     version: "2.2.0"
   intl:
     dependency: "direct main"
@@ -402,8 +431,8 @@ packages:
     dependency: "direct main"
     description:
       path: "packages/jlogical_utils/jlogical_utils_cli"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -411,8 +440,8 @@ packages:
     dependency: "direct main"
     description:
       path: "packages/jlogical_utils/jlogical_utils_core"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -460,8 +489,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/log_core"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -489,6 +518,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.12.16"
+  messaging_core:
+    dependency: transitive
+    description:
+      path: "packages/pond/modules/messaging_core"
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
+      url: "git@github.com:jaboyc/jlogical_utils.git"
+    source: git
+    version: "0.0.1"
   meta:
     dependency: "direct main"
     description:
@@ -509,8 +547,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/model/model_core"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -526,8 +564,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/ops"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -551,8 +589,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/path_core"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -560,8 +598,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/persistence/persistence_core"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -585,8 +623,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/pond_cli"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -594,8 +632,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/pond_core"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -611,8 +649,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/port/port_core"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -620,8 +658,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/port_drop_core"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -693,8 +731,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/release"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -757,10 +795,11 @@ packages:
   snapshot:
     dependency: transitive
     description:
-      name: snapshot
-      sha256: "04a7910492987d00ca8c6767297ed773e6e206d0fc1ce7365a3cddf6847e92b5"
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: "5055a63325774deecfd6bac53c51e7b08e999c22"
+      resolved-ref: "5055a63325774deecfd6bac53c51e7b08e999c22"
+      url: "git@github.com:SKnoedler/snapshot.git"
+    source: git
     version: "0.2.5"
   source_map_stack_trace:
     dependency: transitive
@@ -838,8 +877,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/task_core"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -887,8 +926,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/type"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -896,8 +935,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/pond/modules/type_core"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -917,12 +956,21 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
+  user_device_token_core:
+    dependency: transitive
+    description:
+      path: "packages/pond/modules/user_device_token_core"
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
+      url: "git@github.com:jaboyc/jlogical_utils.git"
+    source: git
+    version: "0.0.1"
   utils_core:
     dependency: transitive
     description:
       path: "packages/utils/utils_core"
-      ref: "v3.0"
-      resolved-ref: ea012cacf60833243a5efc153d0a34f266cbbe75
+      ref: "v3.1"
+      resolved-ref: "500f5923d26af49d2c7a2602d170d8e1d11d5fb3"
       url: "git@github.com:jaboyc/jlogical_utils.git"
     source: git
     version: "0.0.1"
@@ -993,10 +1041,11 @@ packages:
   xcodeproj:
     dependency: transitive
     description:
-      name: xcodeproj
-      sha256: "9c1652d6fd1519e195f356b378e27bf68b7dd454e03a5ae499f4a934b0f22d09"
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: master
+      resolved-ref: "95c8b54b18223a49cb2d99c5a81577ed993f24c3"
+      url: "git@github.com:jaboyc/xcodeproj.git"
+    source: git
     version: "0.2.3"
   xml:
     dependency: transitive

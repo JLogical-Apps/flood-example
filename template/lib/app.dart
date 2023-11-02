@@ -12,18 +12,8 @@ const shouldAddTestData = true;
 
 Future<void> main(List<String> args) async {
   await PondApp.run(
-    appPondContextGetter: () =>
-        buildLateAsync<AppPondContext>((appPondContextGetter) async => getAppPondContext(await getCorePondContext(
-              environmentConfig: EnvironmentConfig.static.flutterAssets(),
-              repositoryImplementations: [
-                FlutterFileRepositoryImplementation(),
-              ],
-            ))),
-    splashPage: StyledPage(
-      body: Center(
-        child: StyledLoadingIndicator(),
-      ),
-    ),
+    appPondContextGetter: buildAppPondContext,
+    loadingPage: StyledLoadingPage(),
     notFoundPage: StyledPage(
       body: Center(
         child: StyledText.h1('Not Found!'),
@@ -33,7 +23,14 @@ Future<void> main(List<String> args) async {
   );
 }
 
-Future<AppPondContext> getAppPondContext(CorePondContext corePondContext) async {
+Future<AppPondContext> buildAppPondContext() async {
+  final corePondContext = await getCorePondContext(
+    environmentConfig: EnvironmentConfig.static.flutterAssets(),
+    loggerService: (corePondContext) => corePondContext.environment.isOnline
+        ? LoggerService.static.console.withFileLogHistory(corePondContext.fileSystem.tempDirectory / 'logs')
+        : LoggerService.static.console,
+  );
+
   final appPondContext = AppPondContext(corePondContext: corePondContext);
   await appPondContext.register(DebugAppComponent());
   await appPondContext.register(LogAppComponent());
