@@ -13,13 +13,12 @@ Here are the steps to use this as a baseline for your project:
 4. In {{NAME}}/pubspec.yaml, replace `template` with {{NAME}}.
 5. In {{NAME}}_core/pubspec.yaml, replace `template` with {{NAME}}.
 6. In melos.yaml, replace all `template`s with {{NAME}} and set the `repository` to the url of your Github repository.
-7. In upgrade_both.sh, replace `template` with {{NAME}}. Run the script to update your pubs.
-8. Replace every instance of `package:template_core/` with `package:{{NAME}}_core/`.
-9. In {{NAME}}_core/tool/automate.dart, replace `Directory.current.parent / 'template'`
+7. Replace every instance of `package:template_core/` with `package:{{NAME}}_core/`.
+8. In {{NAME}}_core/tool/automate.dart, replace `Directory.current.parent / 'template'`
    with `Directory.current.parent / '{{NAME}}'` and `coreDirectory.parent / 'template'`
    with `coreDirectory.parent / '{{NAME}}'.
-10. Replace every instance of `com.example.template` with your app identifier.
-11. Search for `TODO` across the project to find what steps you should take to customize the project.
+9. Replace every instance of `com.example.template` with your app identifier.
+10. Search for `TODO` across the project to find what steps you should take to customize the project.
 
 ## Workflow
 
