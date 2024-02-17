@@ -7,3 +7,4 @@ Runner.app.*
 # Melos
 pubspec_overrides.yaml
 *.iml
+.dart_tool/

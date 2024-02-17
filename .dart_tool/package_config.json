@@ -39,9 +39,9 @@
     },
     {
       "name": "cli_util",
-      "rootUri": "file:///Users/jakeboychenko/.pub-cache/hosted/pub.dev/cli_util-0.4.0",
+      "rootUri": "file:///Users/jakeboychenko/.pub-cache/hosted/pub.dev/cli_util-0.4.1",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.0"
     },
     {
       "name": "collection",
@@ -75,9 +75,9 @@
     },
     {
       "name": "http",
-      "rootUri": "file:///Users/jakeboychenko/.pub-cache/hosted/pub.dev/http-1.1.0",
+      "rootUri": "file:///Users/jakeboychenko/.pub-cache/hosted/pub.dev/http-1.2.0",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.2"
     },
     {
       "name": "http_parser",
@@ -105,19 +105,19 @@
     },
     {
       "name": "matcher",
-      "rootUri": "file:///Users/jakeboychenko/.pub-cache/hosted/pub.dev/matcher-0.12.16",
+      "rootUri": "file:///Users/jakeboychenko/.pub-cache/hosted/pub.dev/matcher-0.12.16+1",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.0"
     },
     {
       "name": "melos",
-      "rootUri": "file:///Users/jakeboychenko/.pub-cache/hosted/pub.dev/melos-3.1.1",
+      "rootUri": "file:///Users/jakeboychenko/.pub-cache/hosted/pub.dev/melos-3.4.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "meta",
-      "rootUri": "file:///Users/jakeboychenko/.pub-cache/hosted/pub.dev/meta-1.10.0",
+      "rootUri": "file:///Users/jakeboychenko/.pub-cache/hosted/pub.dev/meta-1.12.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -129,15 +129,15 @@
     },
     {
       "name": "path",
-      "rootUri": "file:///Users/jakeboychenko/.pub-cache/hosted/pub.dev/path-1.8.3",
+      "rootUri": "file:///Users/jakeboychenko/.pub-cache/hosted/pub.dev/path-1.9.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.0"
     },
     {
       "name": "platform",
-      "rootUri": "file:///Users/jakeboychenko/.pub-cache/hosted/pub.dev/platform-3.1.2",
+      "rootUri": "file:///Users/jakeboychenko/.pub-cache/hosted/pub.dev/platform-3.1.4",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.0"
     },
     {
       "name": "pool",
@@ -213,7 +213,7 @@
     },
     {
       "name": "test_api",
-      "rootUri": "file:///Users/jakeboychenko/.pub-cache/hosted/pub.dev/test_api-0.6.1",
+      "rootUri": "file:///Users/jakeboychenko/.pub-cache/hosted/pub.dev/test_api-0.7.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -228,6 +228,12 @@
       "rootUri": "file:///Users/jakeboychenko/.pub-cache/hosted/pub.dev/uri-1.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "web",
+      "rootUri": "file:///Users/jakeboychenko/.pub-cache/hosted/pub.dev/web-0.4.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
     },
     {
       "name": "yaml",
@@ -248,7 +254,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-10-04T13:01:11.653290Z",
+  "generated": "2024-02-17T16:56:35.764791Z",
   "generator": "pub",
-  "generatorVersion": "3.1.3"
+  "generatorVersion": "3.2.6"
 }
