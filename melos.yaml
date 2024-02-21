@@ -1,9 +1,9 @@
-name: template
-repository: https://github.com/your_username/your_repository
+name: todo
+repository: https://github.com/JLogical-Apps/flood-example
 
 packages:
-  - template
-  - template_core
+  - todo
+  - todo_core
 
 command:
   bootstrap:

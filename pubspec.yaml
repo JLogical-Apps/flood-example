@@ -1,5 +1,5 @@
-name: template
-description: Template project
+name: flood_todo
+description: Example Todo app with authentication using Flood.
 
 publish_to: "none"
 
