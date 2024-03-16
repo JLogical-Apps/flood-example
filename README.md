@@ -4,11 +4,11 @@ This is a sample Flutter project built with Flood, which incorporates authentica
 
 ## Key Features
 
-### [Path](https://www.flooddev.com#path)
+### Path
 
 All routes are type-safe. By defining a `Route` and `AppPage`, you can grab the required properties from a url, ensure they are in the expected type, and provide fallbacks if one is not provided. Take a look at [LoginPage](todo/lib/presentation/pages/auth/login_page.dart) for a simple example. [SignupPage](todo/lib/presentation/pages/auth/signup_page.dart) shows off how you can pass hidden state through routes. [HomePage](todo/lib/presentation/pages/home_page.dart) demonstrates how you can easily add redirects from pages in a composable manner.
 
-### [Environment](https://www.flooddev.com#environment)
+### Environment
 
 Configuration can be overridden by adding a `todo/assets/config.overrides.yaml`. This is primarily useful if you want to override the environment you are running when testing the app.
 
