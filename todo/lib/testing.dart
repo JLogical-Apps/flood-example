@@ -1,4 +1,4 @@
-import 'package:jlogical_utils/jlogical_utils.dart';
+import 'package:flood/flood.dart';
 import 'package:todo_core/features/todo/todo.dart';
 import 'package:todo_core/features/todo/todo_entity.dart';
 import 'package:todo_core/features/user/user.dart';
@@ -8,7 +8,7 @@ Future<void> setupTesting(CorePondContext corePondContext) async {
   final authComponent = corePondContext.locate<AuthCoreComponent>();
   final dropComponent = corePondContext.locate<DropCoreComponent>();
 
-  final account = await authComponent.signup('test@test.com', 'password');
+  final account = await authComponent.signup(AuthCredentials.email(email: 'test@test.com', password: 'password'));
 
   final userEntity = await dropComponent.updateEntity(
     UserEntity()..id = account.accountId,

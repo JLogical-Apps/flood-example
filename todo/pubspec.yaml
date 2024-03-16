@@ -3,16 +3,16 @@ description: Example Flutter app using JLogical Utils.
 publish_to: none
 version: 0.0.11+41
 environment:
-  sdk: ">=3.0.0 <4.0.0"
+  sdk: ">=3.2.0 <4.0.0"
 dependencies:
   flutter:
     sdk: flutter
   flutter_hooks: ^0.18.5+1
-  jlogical_utils:
+  flood:
     git:
-      url: "git@github.com:jaboyc/jlogical_utils.git"
-      ref: v3.2
-      path: packages/jlogical_utils/jlogical_utils
+      url: "git@github.com:JLogical-Apps/flood.git"
+      ref: v4.0
+      path: packages/flood/flood
   todo_core:
     path: ../todo_core
 flutter:
@@ -26,8 +26,5 @@ dev_dependencies:
   flutter_lints: ^2.0.1
   flutter_native_splash: ^2.3.7
 dependency_overrides:
-  intl: 0.18.0
-  win32: 4.1.0
-  path: 1.8.3
-  js: 0.6.5
-  posix: 5.0.0
+  http: 0.13.5
+  vm_service: 13.0.0

@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:jlogical_utils_cli/jlogical_utils_cli.dart';
+import 'package:flood_cli/flood_cli.dart';
 import 'package:todo_core/pond.dart';
 
 Future<void> main(List<String> args) async {

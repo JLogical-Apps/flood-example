@@ -1,9 +1,9 @@
+import 'package:flood/flood.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:todo/presentation/pages/auth/signup_page.dart';
 import 'package:todo/presentation/pages/home_page.dart';
 import 'package:todo/presentation/utils/redirect_utils.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:jlogical_utils/jlogical_utils.dart';
 
 class LoginRoute with IsRoute<LoginRoute> {
   late final redirectPathProperty = field<String>(name: 'redirect');
@@ -35,7 +35,7 @@ class LoginPage with IsAppPageWrapper<LoginRoute> {
       body: StyledList.column.centered.withScrollbar(
         children: [
           StyledImage.asset('assets/logo_foreground.png', width: 200, height: 200),
-          StyledText.h1.strong('Welcome to Flood'),
+          StyledText.twoXl.strong('Welcome to Flood'),
           StyledDivider(),
           StyledObjectPortBuilder(port: loginPort),
           StyledList.row.centered.withScrollbar(
@@ -51,7 +51,9 @@ class LoginPage with IsAppPageWrapper<LoginRoute> {
                   final data = result.data;
 
                   try {
-                    await context.find<AuthCoreComponent>().login(data['email'], data['password']);
+                    await context
+                        .find<AuthCoreComponent>()
+                        .login(AuthCredentials.email(email: data['email'], password: data['password']));
                     context.warpTo(HomeRoute());
                   } catch (e, stackTrace) {
                     final errorText = e.as<LoginFailure>()?.displayText ?? e.toString();

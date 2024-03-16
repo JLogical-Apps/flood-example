@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "376681021589",
+    "project_id": "pond-automation-1",
+    "storage_bucket": "pond-automation-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376681021589:android:d8b102020b5f6f82275b9c",
+        "android_client_info": {
+          "package_name": "com.jlogical.example"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376681021589-fsf4oin0ivl4f901bspao2art3hi3ma4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXUFgnfxMSnjI6BgWYXJ4C0DW2tPtExFk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376681021589-fsf4oin0ivl4f901bspao2art3hi3ma4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "376681021589-qu0s096fd85behommtc1kvhhjphr746q.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.jlogical.example"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

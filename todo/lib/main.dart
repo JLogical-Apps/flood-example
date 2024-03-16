@@ -1,13 +1,12 @@
 import 'dart:async';
 
+import 'package:flood/flood.dart';
+import 'package:flutter/material.dart';
 import 'package:todo/firebase_options.dart';
-import 'package:todo/presentation/pages/home_page.dart';
 import 'package:todo/presentation/style.dart';
 import 'package:todo/presentation/todo_pages_pond_component.dart';
 import 'package:todo/testing.dart';
 import 'package:todo_core/pond.dart';
-import 'package:flutter/material.dart';
-import 'package:jlogical_utils/jlogical_utils.dart';
 
 // When setting up the test suite [testingLoggedIn] will determine whether to have the user logged in.
 const testingLoggedIn = true;
@@ -18,10 +17,9 @@ Future<void> main(List<String> args) async {
     loadingPage: StyledLoadingPage(),
     notFoundPage: StyledPage(
       body: Center(
-        child: StyledText.h1('Not Found!'),
+        child: StyledText.twoXl('Not Found!'),
       ),
     ),
-    initialRouteGetter: () => HomeRoute(),
   );
 }
 

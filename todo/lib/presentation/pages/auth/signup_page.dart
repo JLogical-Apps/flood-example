@@ -1,11 +1,11 @@
+import 'package:flood/flood.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:todo/presentation/pages/auth/login_page.dart';
 import 'package:todo/presentation/pages/home_page.dart';
 import 'package:todo/presentation/utils/redirect_utils.dart';
 import 'package:todo_core/features/user/user.dart';
 import 'package:todo_core/features/user/user_entity.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:jlogical_utils/jlogical_utils.dart';
 
 class SignupRoute with IsRoute<SignupRoute> {
   late final redirectPathProperty = field<String>(name: 'redirect');
@@ -76,7 +76,9 @@ class SignupPage with IsAppPageWrapper<SignupRoute> {
               final data = result.data;
 
               try {
-                final account = await context.find<AuthCoreComponent>().signup(data['email'], data['password']);
+                final account = await context
+                    .find<AuthCoreComponent>()
+                    .signup(AuthCredentials.email(email: data['email'], password: data['password']));
                 final deviceToken = context.find<MessagingCoreComponent>().deviceToken;
 
                 await context.dropCoreComponent.updateEntity(

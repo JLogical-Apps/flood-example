@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:jlogical_utils_core/jlogical_utils_core.dart';
+import 'package:flood_core/flood_core.dart';
 import 'package:todo_core/features/todo/todo_repository.dart';
 import 'package:todo_core/features/user/user.dart';
 import 'package:todo_core/features/user/user_entity.dart';
@@ -34,14 +34,13 @@ Future<CorePondContext> getCorePondContext({
     loggerService: loggerService?.call(corePondContext) ?? LoggerService.static.console,
   ));
 
-  await corePondContext.register(AuthCoreComponent(
-    authService: AuthService.static.adapting(),
-    authServiceImplementations: authServiceImplementations?.call(corePondContext) ?? [],
-  ));
   await corePondContext.register(DropCoreComponent(
     repositoryImplementations: repositoryImplementations?.call(corePondContext) ?? [],
-    loggedInAccountX:
-        corePondContext.locate<AuthCoreComponent>().accountX.mapWithValue((maybeUserIdX) => maybeUserIdX.getOrNull()),
+    loggedInAccountGetter: () => corePondContext.locate<AuthCoreComponent>().accountX.value.getOrNull(),
+  ));
+  await corePondContext.register(AuthCoreComponent(
+    authService: AuthService.static.adapting(memoryIsAdmin: true),
+    authServiceImplementations: authServiceImplementations?.call(corePondContext) ?? [],
   ));
   await corePondContext.register(MessagingCoreComponent(
     messagingService: messagingService?.call(corePondContext) ?? MessagingService.static.blank,
@@ -78,7 +77,7 @@ Future<CorePondContext> getTestingCorePondContext() async {
     environmentConfig: EnvironmentConfig.static.testing(),
   );
 
-  await corePondContext.locate<AuthCoreComponent>().signup('asdf@asdf.com', 'mypassword');
+  await corePondContext.locate<AuthCoreComponent>().signup(AuthCredentials.email(email: 'asdf@asdf.com', password: 'mypassword'));
 
   return corePondContext;
 }
