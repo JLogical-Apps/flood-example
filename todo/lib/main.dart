@@ -26,7 +26,7 @@ Future<void> main(List<String> args) async {
 Future<AppPondContext> buildAppPondContext() async {
   final corePondContext = await getCorePondContext(
     environmentConfig: EnvironmentConfig.static.flutterAssets(),
-    additionalCoreComponents: (corePondContext) => [
+    initialCoreComponents: (corePondContext) => [
       if (corePondContext.environment.isOnline) ...[FirebaseCoreComponent(app: DefaultFirebaseOptions.currentPlatform)]
     ],
     repositoryImplementations: (corePondContext) => [
@@ -43,19 +43,7 @@ Future<AppPondContext> buildAppPondContext() async {
   );
 
   final appPondContext = AppPondContext(corePondContext: corePondContext);
-  await appPondContext.register(DebugAppComponent());
-  await appPondContext.register(LogAppComponent());
-  await appPondContext.register(DeviceFilesAppComponent());
-  await appPondContext.register(FocusGrabberAppComponent());
-  await appPondContext.register(AuthAppComponent());
-  await appPondContext.register(DropAppComponent());
-  await appPondContext.register(ResetAppComponent());
-  await appPondContext.register(FirebaseCrashlyticsAppComponent());
-  await appPondContext.register(PortStyleAppComponent());
-  await appPondContext.register(StyleAppComponent(style: style));
-  await appPondContext.register(UrlBarAppComponent());
-  await appPondContext.register(EnvironmentBannerAppComponent());
-  await appPondContext.register(ShareAppComponent());
+  await appPondContext.register(FloodAppComponent(style: style));
   await appPondContext.register(TestingSetupAppComponent(onSetup: () async {
     if (testingLoggedIn) {
       await setupTesting(corePondContext);
