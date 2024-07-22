@@ -92,7 +92,7 @@ class SignupPage with IsAppPageWrapper<SignupRoute> {
                 await context.push(HomeRoute());
               } catch (e, stackTrace) {
                 final errorText = e.as<SignupFailure>()?.displayText ?? e.toString();
-                signupPort.setError(name: 'email', error: errorText);
+                signupPort.setError(path: 'email', error: errorText);
                 context.logError(e, stackTrace);
               }
             },

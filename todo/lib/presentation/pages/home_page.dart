@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flood/flood.dart';
+import 'package:flutter/material.dart';
 import 'package:todo/presentation/pages/auth/login_page.dart';
 import 'package:todo/presentation/utils/redirect_utils.dart';
 import 'package:todo_core/features/todo/todo.dart';
@@ -72,7 +72,7 @@ class HomePage with IsAppPageWrapper<HomeRoute> {
                             .updateEntity(todoEntity, (Todo todo) => todo.completedProperty.set(value));
                       },
                     ),
-                    actions: _getTodoActions(todoEntity),
+                    actions: ActionItem.static.entityCrudActions(context, entity: todoEntity),
                   )),
               if (uncompletedTodos.isNotEmpty && completedTodos.isNotEmpty) StyledDivider(),
               ...completedTodos.map((todoEntity) => StyledCard.subtle(
@@ -85,43 +85,12 @@ class HomePage with IsAppPageWrapper<HomeRoute> {
                             .updateEntity(todoEntity, (Todo todo) => todo.completedProperty.set(value));
                       },
                     ),
-                    actions: _getTodoActions(todoEntity),
+                    actions: ActionItem.static.entityCrudActions(context, entity: todoEntity),
                   )),
             ],
           ),
         );
       },
     );
-  }
-
-  List<ActionItem> _getTodoActions(TodoEntity todoEntity) {
-    return [
-      ActionItem(
-        titleText: 'Edit',
-        color: Colors.orange,
-        descriptionText: 'Edit this Todo.',
-        iconData: Icons.edit,
-        onPerform: (context) => context.showStyledDialog(StyledPortDialog<Todo>(
-          titleText: 'Edit Todo',
-          port: todoEntity.value.asPort(context.corePondContext),
-          onAccept: (Todo todo) async {
-            await context.dropCoreComponent.updateEntity(todoEntity..set(todo));
-          },
-        )),
-      ),
-      ActionItem(
-        titleText: 'Delete',
-        color: Colors.red,
-        descriptionText: 'Delete this Todo.',
-        iconData: Icons.delete,
-        onPerform: (context) => context.showStyledDialog(StyledDialog.yesNo(
-          titleText: 'Confirm Delete',
-          bodyText: 'Are you sure you want to delete this Todo? You cannot undo this.',
-          onAccept: () async {
-            await context.dropCoreComponent.delete(todoEntity);
-          },
-        )),
-      ),
-    ];
   }
 }

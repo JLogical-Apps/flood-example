@@ -30,7 +30,6 @@ Future<AppPondContext> buildAppPondContext() async {
       if (corePondContext.environment.isOnline) ...[FirebaseCoreComponent(app: DefaultFirebaseOptions.currentPlatform)]
     ],
     repositoryImplementations: (corePondContext) => [
-      FlutterFileRepositoryImplementation(),
       FirebaseCloudRepositoryImplementation(),
     ],
     authServiceImplementations: (corePondContext) => [FirebaseAuthServiceImplementation()],
