@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:todo/firebase_options.dart';
 import 'package:todo/presentation/style.dart';
 import 'package:todo/presentation/todo_pages_pond_component.dart';
+import 'package:todo/presentation/utils/user_theme_extensions.dart';
 import 'package:todo/testing.dart';
+import 'package:todo_core/features/user/user_entity.dart';
 import 'package:todo_core/pond.dart';
 
 // When setting up the test suite [testingLoggedIn] will determine whether to have the user logged in.
@@ -42,7 +44,23 @@ Future<AppPondContext> buildAppPondContext() async {
   );
 
   final appPondContext = AppPondContext(corePondContext: corePondContext);
-  await appPondContext.register(FloodAppComponent(style: style));
+  await appPondContext.register(FloodAppComponent(
+    style: darkStyle,
+    styleLoader: (context) async {
+      final loggedInUserId = context.authCoreComponent.loggedInUserId;
+      if (loggedInUserId == null) {
+        return null;
+      }
+
+      final loggedInUserEntity = await Query.getByIdOrNull<UserEntity>(loggedInUserId).get(context.dropCoreComponent);
+      if (loggedInUserEntity == null) {
+        return null;
+      }
+
+      final theme = loggedInUserEntity.value.themeProperty.value;
+      return theme.style;
+    },
+  ));
   await appPondContext.register(TestingSetupAppComponent(onSetup: () async {
     if (testingLoggedIn) {
       await setupTesting(corePondContext);
