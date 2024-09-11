@@ -2,7 +2,6 @@ import 'package:flood/flood.dart';
 import 'package:flutter/material.dart';
 import 'package:todo/presentation/pages/auth/login_page.dart';
 import 'package:todo/presentation/utils/redirect_utils.dart';
-import 'package:todo/presentation/widgets/theme_switcher.dart';
 import 'package:todo_core/features/todo/todo.dart';
 import 'package:todo_core/features/todo/todo_entity.dart';
 
@@ -37,7 +36,7 @@ class HomePage with IsAppPageWrapper<HomeRoute> {
 
         return StyledPage(
           titleText: 'Todos',
-          actionWidgets: [ThemeSwitcher()],
+          actionWidgets: [],
           actions: [
             ActionItem(
               titleText: 'Logout',
